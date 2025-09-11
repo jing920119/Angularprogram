@@ -17,13 +17,17 @@
 }
 
 tr:nth-of-type(even) td {
-  background-color: #faf3dd;
-}
-
-tr:last-of-type {
-  border-bottom: 2px solid #1975ff;
+  background-color: #1975ff;
 }
 
 .all {
   text-align: center;
+}
+
+.find {
+  width: 25%;
+}
+
+.list {
+  width: 75%;
 }
