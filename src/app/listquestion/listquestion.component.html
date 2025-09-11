@@ -1,11 +1,19 @@
-<p>listquestion works!</p>
-
 <div class="all">
 
-  <div class="find">
-    搜尋框
+  <div class="left-side">
+    <div class="find">
+      <label for="name">名稱</label>
+      <input type="text" placeholder="輸入名稱">
+      <label for="start">開始時間</label>
+      <input type="date">
+      <label for="end">結束時間</label>
+      <input type="date">
+      <button>查詢</button>
+    </div>
+
   </div>
-  <div class="list">
+  <div class="divider" role="separator" aria-label="Divider"></div>
+  <div class="right-side">
 
     <div class="mat-elevation-z8 ">
       <table mat-table [dataSource]="dataSource">
@@ -51,6 +59,3 @@
     </div>
   </div>
 </div>
-
-
-#5b6946
