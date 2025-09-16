@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.mat-elevation-z8 {
+  margin-top: 15%;
+}
+
 .mat-mdc-row .mat-mdc-cell {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
@@ -27,9 +31,26 @@ table {
 .all {
   display: flex;
   justify-content: space-around;
-  width: 100%;
-
   margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  background-image: url('https://plus.unsplash.com/premium_photo-1757322537620-4f4a3226c6ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  /* 模糊程度 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* 保證在文字下方 */
 }
 
 @media screen and (max-width: 650px) {
@@ -44,11 +65,13 @@ table {
 }
 
 .find {
+  color: #322a27;
   width: 80%;
   height: 80%;
-  background-color: #75a6f0;
+  background-color: #d3c7be;
   border-radius: 20px;
   padding: 30px 20px;
+  margin-top: 20px;
   margin-left: 10px;
   text-align: center;
   font-family: "Microsoft JhengHei", sans-serif;

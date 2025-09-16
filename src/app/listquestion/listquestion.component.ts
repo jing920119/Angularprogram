@@ -5,7 +5,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
   selector: 'app-listquestion',
   imports: [
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
   templateUrl: './listquestion.component.html',
   styleUrl: './listquestion.component.scss'

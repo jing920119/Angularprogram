@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { ListquestionComponent } from './listquestion/listquestion.component';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { ListquestionComponent } from './listquestion/listquestion.component';
     RouterLinkActive,
     RouterLink,
     QuestionnaireComponent,
-    ListquestionComponent
+    ListquestionComponent,
+    LoginComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -27,6 +29,8 @@ export class AppComponent {
       this.router.navigateByUrl('/questionnaire');
     } else if (Page == 2) {
       this.router.navigateByUrl('/Listquestion');
+    } else if (Page == 3) {
+      this.router.navigateByUrl('/login');
     }
 
   }

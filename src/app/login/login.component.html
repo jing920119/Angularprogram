@@ -1,0 +1,31 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="background-container">
+  <div class="background-image"></div>
+  <div class="content">
+    <h1>登入</h1>
+
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Email</label>
+    </div>
+
+    <div class="group">
+      <input #passwordInput type="password" id="floatingPassword" required>
+      <span class="bar"></span>
+      <label for="floatingPassword">密碼</label>
+
+      <!-- 眼睛 icon 切換 -->
+      <i class="material-icons " (click)="togglePassword()"
+        style=" right: 3%;left: auto; top:50%; transform:translateY(-50%); cursor:pointer; z-index:2;">
+        {{ showPassword ? 'visibility_off' : 'visibility' }}
+      </i>
+    </div>
+    <!-- 眼睛 icon 切換 -->
+
+    <label>忘記密碼</label><label>註冊帳號</label>
+    <button>Log in</button>
+  </div>
+</div>
