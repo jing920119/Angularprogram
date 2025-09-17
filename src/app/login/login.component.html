@@ -2,30 +2,39 @@
 
 <div class="background-container">
   <div class="background-image"></div>
-  <div class="content">
-    <h1>登入</h1>
+  <div class="box">
+    <div class="content">
+      <h1>登入</h1>
 
-    <div class="group">
-      <input type="text" required>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Email</label>
-    </div>
+      <div style="display: flex;  justify-content: center;">
+        <div class="group">
+          <input type="text" required>
+          <span class="bar"></span>
+          <label>Email</label>
+        </div>
+      </div>
 
-    <div class="group">
-      <input #passwordInput type="password" id="floatingPassword" required>
-      <span class="bar"></span>
-      <label for="floatingPassword">密碼</label>
+      <div style="display: flex;  justify-content: center;">
+        <div class="group">
+          <input #passwordInput type="password" id="floatingPassword" required>
+          <span class="bar"></span>
+          <label for="floatingPassword">密碼</label>
 
+          <!-- 眼睛 icon 切換 -->
+          <i class="material-icons " (click)="togglePassword()"
+            style=" right: 3%;left: auto; top:50%; transform:translateY(-50%); cursor:pointer; z-index:2;">
+            {{ showPassword ? 'visibility_off' : 'visibility' }}
+          </i>
+        </div>
+      </div>
       <!-- 眼睛 icon 切換 -->
-      <i class="material-icons " (click)="togglePassword()"
-        style=" right: 3%;left: auto; top:50%; transform:translateY(-50%); cursor:pointer; z-index:2;">
-        {{ showPassword ? 'visibility_off' : 'visibility' }}
-      </i>
-    </div>
-    <!-- 眼睛 icon 切換 -->
 
-    <label>忘記密碼</label><label>註冊帳號</label>
-    <button>Log in</button>
+      <div class="link-container">
+        <span class="clickable-text" (click)="onForgotPassword()">忘記密碼</span>
+        |
+        <span class="clickable-text" (click)="onRegister()">註冊帳號</span>
+      </div>
+      <button class="Btn" (click)="LoginBtn()">Log in</button>
+    </div>
   </div>
 </div>

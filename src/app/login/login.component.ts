@@ -22,4 +22,23 @@ export class LoginComponent {
     console.log(1);
   }
 
+  onForgotPassword(): void {
+    // 這裡可以導向忘記密碼頁面，或開啟 modal
+    console.log('使用者點擊了忘記密碼');
+    // 例如：this.router.navigate(['/forgot-password']);
+  }
+
+  onRegister(): void {
+    // 這裡可以導向註冊頁面，或開啟註冊表單
+    console.log('使用者點擊了註冊帳號');
+    // 例如：this.router.navigate(['/register']);
+  }
+
+  LoginBtn(): void {
+    // 這裡可以導向註冊頁面，或開啟註冊表單
+    console.log('使用者點擊了登入');
+    // 例如：this.router.navigate(['/register']);
+  }
+
+
 }

@@ -1,8 +1,16 @@
 .headpage {
   height: 7%;
-  background-color: rgb(196, 183, 169);
+  width: 550px;
 
-  display: flex;
-  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  /* 半透明白色 */
+  backdrop-filter: blur(5px);
+  /* 模糊效果，產生玻璃感 */
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  /* 半透明白邊框 */
+  border-radius: 40px;
+  /* 圓角 */
+  z-index: 2;
+  /* 把卡片放在圓形前面 */
 
 }
