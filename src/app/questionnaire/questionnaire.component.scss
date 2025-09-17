@@ -3,16 +3,17 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
   /* ✅ 關鍵：背景固定 */
-  filter: blur(10px);
-  /* 模糊程度 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  /* 保證在文字下方 */
+  // filter: blur(10px);
+  height: auto;
+  overflow-y: scroll;
+  width: auto;
+
+}
+
+.all {
+  backdrop-filter: blur(10px) brightness(85%);
 }
 
 @media screen and (max-width: 650px) {
@@ -24,7 +25,7 @@
 
 .head {
   text-align: center;
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -33,6 +34,62 @@
 }
 
 .describe {
+  width: 400px;
+
+  color: #ffffff;
+}
+
+form {
+  color: #ffffff;
+}
+
+.mdc-label {
+  color: #ffffff;
+}
+
+.choose {
+  color: #ffffff;
+}
+
+/* 毛玻璃容器 */
+.glass-container {
   width: 600px;
-  background-color: black;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  /* 半透明白色 */
+  backdrop-filter: blur(15px);
+  /* 毛玻璃模糊 */
+  -webkit-backdrop-filter: blur(15px);
+  /* Safari 相容 */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* 微亮邊框 */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: rgb(162, 201, 244);
+  text-align: center;
+}
+
+.Btn {
+  margin-top: 15px;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  background: transparent;
+  border: 2.4px solid #fff;
+  border-radius: 50px;
+  color: #ffffff;
+}
+
+.Btn:hover {
+  transition: 0.5s;
+  color: #000;
+  background: #fff;
+}
+
+fieldset {
+  width: 400px;
 }

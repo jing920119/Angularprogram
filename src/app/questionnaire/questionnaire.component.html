@@ -1,17 +1,88 @@
-<div class="all">
-  <div class="background-image"></div>
-  <div class="head">
-    <div class="tietle">
-      <h1>標題</h1>
+<div class="background-image">
+  <!-- 頁面標題 -->
+  <div class="all">
+    <div class="head">
+      <div class="title">
+        <h1>標題</h1>
+      </div>
+      <div class="describe">
+        <h5>內容</h5>
+      </div>
     </div>
     <div class="describe">
-      <h5>內容</h5>
+      <h5>創立時間：2025/9/17</h5>
     </div>
+
+    <hr />
+
+    <!-- 整合為一個表單 -->
+    <form>
+      <!-- 基本資料 -->
+      <fieldset>
+        <legend>基本資料</legend>
+        <p>
+          <input type="radio" name="size" id="size_1" value="small" />
+          <label for="size_1">Small</label>
+        </p>
+        <p>
+          <input type="radio" name="size" id="size_2" value="medium" />
+          <label for="size_2">Medium</label>
+        </p>
+        <p>
+          <input type="radio" name="size" id="size_3" value="large" />
+          <label for="size_3">Large</label>
+        </p>
+      </fieldset>
+
+      <!-- Angular Material Checkbox -->
+      <div class="glass-container">
+        複選題題目標題
+        <br>
+        <mat-checkbox [formControl]="hideRequiredControl">隱藏必填標記</mat-checkbox>
+        <mat-checkbox [formControl]="hideRequiredControl">顯示必填標記</mat-checkbox>
+        <mat-checkbox [formControl]="hideRequiredControl">隱藏必填標記</mat-checkbox>
+        <mat-checkbox [formControl]="hideRequiredControl">隱藏必填標記</mat-checkbox>
+      </div>
+
+      <!-- 原生 Checkbox -->
+      <!-- <fieldset>
+      <legend>口味偏好</legend>
+      <p>
+        <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
+        <label for="taste_1">我喜歡櫻桃</label>
+      </p>
+      <p>
+        <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+        <label for="taste_2">我喜歡香蕉</label>
+      </p>
+    </fieldset> -->
+
+      <!-- 開放題 -->
+      <div class="glass-container">
+        <label for="nationality">你是哪國人？</label><br />
+        <textarea id="nationality" name="Content" rows="4" cols="40"></textarea>
+
+      </div>
+
+
+
+      <!-- Angular Material Radio -->
+
+      <div class="glass-container">
+        單選題標題
+        <br>
+        <mat-radio-button value="auto">自動</mat-radio-button>
+        <mat-radio-button value="always">總是顯示</mat-radio-button>
+        <mat-radio-button value="always">總是顯示</mat-radio-button>
+        <mat-radio-button value="always">總是顯示</mat-radio-button>
+      </div>
+
+
+      <!-- 送出按鈕 -->
+      <div class="head">
+        <button class="Btn" (click)="backBtn()">back</button>
+        <button class="Btn" (click)="nextBtn()">next</button>
+      </div>
+    </form>
   </div>
-  <hr>
-  <h3>1.題目內容</h3>
-  <h4>A:</h4>
-  <h4>B:</h4>
-  <h4>C:</h4>
-  <h4>D:</h4>
 </div>
