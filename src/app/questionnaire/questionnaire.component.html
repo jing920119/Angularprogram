@@ -18,21 +18,27 @@
     <!-- 整合為一個表單 -->
     <form>
       <!-- 基本資料 -->
-      <fieldset>
-        <legend>基本資料</legend>
-        <p>
-          <input type="radio" name="size" id="size_1" value="small" />
-          <label for="size_1">Small</label>
-        </p>
-        <p>
-          <input type="radio" name="size" id="size_2" value="medium" />
-          <label for="size_2">Medium</label>
-        </p>
-        <p>
-          <input type="radio" name="size" id="size_3" value="large" />
-          <label for="size_3">Large</label>
-        </p>
-      </fieldset>
+      <div class="introduce">
+        <fieldset>
+          <legend>基本資料</legend>
+          <div>
+            <label for="username">Name:</label>
+            <input id="username" type="text" name="username" />
+            <label for="username"><abbr title="required" aria-label="required">-</abbr></label>
+          </div>
+          <div>
+            <label for="number">number:</label>
+            <input id="number" type="text" number="number" />
+            <label for="number"><abbr title="required" aria-label="required">-</abbr></label>
+          </div>
+
+          <div>
+            <label for="username">Name:</label>
+            <input id="username" type="text" name="username" />
+            <label for="username"><abbr title="required" aria-label="required">-</abbr></label>
+          </div>
+        </fieldset>
+      </div>
 
       <!-- Angular Material Checkbox -->
       <div class="glass-container">
@@ -80,8 +86,10 @@
 
       <!-- 送出按鈕 -->
       <div class="head">
-        <button class="Btn" (click)="backBtn()">back</button>
-        <button class="Btn" (click)="nextBtn()">next</button>
+        <div>
+          <button class="Btn" (click)="backBtn()">back</button>
+          <button class="Btn" (click)="nextBtn()">next</button>
+        </div>
       </div>
     </form>
   </div>

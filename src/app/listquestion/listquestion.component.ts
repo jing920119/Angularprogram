@@ -1,16 +1,26 @@
 import { Component, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-listquestion',
   imports: [
     MatTableModule,
     MatPaginatorModule,
+    FormsModule,
   ],
   templateUrl: './listquestion.component.html',
   styleUrl: './listquestion.component.scss'
 })
+
+
+
 export class ListquestionComponent {
+  nametietle !: string;
+
+  constructor(private router: Router) { }
+
 
   displayedColumns: string[] = ['position', 'name', 'stage', 'begintime', 'endtime', 'result'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -22,6 +32,23 @@ export class ListquestionComponent {
     this.dataSource.paginator = this.paginator;
   }
 
+
+  openForm(row: any) {
+
+    // 假設跳轉到 /form/:id
+
+    this.router.navigate(['/questionnaire']);
+
+    // 你可以做以下幾種選擇：
+    // 1. 導到新的路由，例如 /form/:id
+    // 2. 打開一個 Angular Material Dialog，把 row 當作資料傳進去
+    // 3. 在下方顯示一個可編輯的 form
+  }
+
+  Searchdata() {
+
+    // this.dataSource.data
+  }
 
 }
 

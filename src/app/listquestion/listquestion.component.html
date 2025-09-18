@@ -9,7 +9,7 @@
       <input type="date">
       <label for="end">結束時間</label>
       <input type="date">
-      <button>查詢</button>
+      <button (click)="Searchdata()">查詢</button>
     </div>
 
   </div>
@@ -52,11 +52,15 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openForm(row)"></tr>
       </table>
 
       <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons aria-label="Select page of periodic elements">
       </mat-paginator>
     </div>
+
+
+
+
   </div>
 </div>

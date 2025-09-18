@@ -13,3 +13,7 @@ body {
 .mat-mdc-paginator-page-size {
   display: none !important;
 }
+
+.mat-internal-form-field>label {
+  color: #fff;
+}

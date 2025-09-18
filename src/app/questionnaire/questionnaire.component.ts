@@ -39,12 +39,12 @@ export class QuestionnaireComponent {
 
   backBtn(): void {
     // 這裡可以導向註冊頁面，或開啟註冊表單
-    console.log('使用者點擊了登入');
+    console.log('使用者點擊了回前頁');
     // 例如：this.router.navigate(['/register']);
   }
   nextBtn(): void {
     // 這裡可以導向註冊頁面，或開啟註冊表單
-    console.log('使用者點擊了登入');
+    console.log('使用者點擊了下一步');
     // 例如：this.router.navigate(['/register']);
   }
 }
