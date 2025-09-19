@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -25,6 +26,8 @@ import { map } from 'rxjs/operators';
   styleUrl: './questionnaire.component.scss'
 })
 export class QuestionnaireComponent {
+  constructor(private router: Router) { }
+
   readonly hideRequiredControl = new FormControl(false);
   readonly floatLabelControl = new FormControl('auto' as FloatLabelType);
 
@@ -40,11 +43,14 @@ export class QuestionnaireComponent {
   backBtn(): void {
     // 這裡可以導向註冊頁面，或開啟註冊表單
     console.log('使用者點擊了回前頁');
+    this.router.navigate(['/Listquestion']);
     // 例如：this.router.navigate(['/register']);
+
   }
   nextBtn(): void {
     // 這裡可以導向註冊頁面，或開啟註冊表單
     console.log('使用者點擊了下一步');
     // 例如：this.router.navigate(['/register']);
+
   }
 }

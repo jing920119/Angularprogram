@@ -4,12 +4,12 @@
   <div class="left-side">
     <div class="find">
       <label for="name">名稱</label>
-      <input type="text" placeholder="輸入名稱">
+      <input type="text" placeholder="輸入名稱" [(ngModel)]="searchName" (keyup)="applyFilters()">
       <label for="start">開始時間</label>
-      <input type="date">
+      <input type="date" [(ngModel)]="begintime" (change)="applyFilters()">
       <label for="end">結束時間</label>
-      <input type="date">
-      <button (click)="Searchdata()">查詢</button>
+      <input type="date" [(ngModel)]="endtime" (change)="applyFilters()">
+
     </div>
 
   </div>
@@ -22,37 +22,37 @@
         <!-- Position Column -->
         <ng-container matColumnDef="position">
           <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openForm()"> {{element.position}} </td>
         </ng-container>
 
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openForm()"> {{element.name}} </td>
         </ng-container>
 
         <!-- Stage Column -->
         <ng-container matColumnDef="stage">
           <th mat-header-cell *matHeaderCellDef> Stage </th>
-          <td mat-cell *matCellDef="let element"> {{element.stage}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openForm()"> {{element.stage}} </td>
         </ng-container>
 
         <!-- Symbol Column -->
         <ng-container matColumnDef="begintime">
           <th mat-header-cell *matHeaderCellDef> Begin </th>
-          <td mat-cell *matCellDef="let element"> {{element.begintime}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openForm()"> {{element.begintime | date: 'yyyy/MM/dd'}} </td>
         </ng-container>
         <ng-container matColumnDef="endtime">
           <th mat-header-cell *matHeaderCellDef> End </th>
-          <td mat-cell *matCellDef="let element"> {{element.endtime}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openForm()"> {{element.endtime | date: 'yyyy/MM/dd'}} </td>
         </ng-container>
         <ng-container matColumnDef="result">
           <th mat-header-cell *matHeaderCellDef> Result </th>
-          <td mat-cell *matCellDef="let element"> {{element.result}} </td>
+          <td mat-cell *matCellDef="let element" (click)="openResult()"> {{element.result}} </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openForm(row)"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 
       <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons aria-label="Select page of periodic elements">
